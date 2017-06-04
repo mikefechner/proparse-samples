@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<references>
+<assembly name="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58"/>
+<assembly name="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58"/>
+<assembly name="proparse.net, Version=4.0.1.1166, Culture=neutral, PublicKeyToken=cda1b098b1034b24"/>
+</references>
