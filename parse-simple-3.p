@@ -47,6 +47,10 @@ pu:treeParser01().
 DELETE OBJECT javafile .
 
 OUTPUT TO simple-3.txt .
+PUT UNFORMATTED "org.prorefactor.nodetypes....  | getType()           |getSubTypeIndex()| getText ()          | ToString ()" SKIP .
+PUT UNFORMATTED "-------------------------------|---------------------|-----------------|---------------------|--------------------------------------------" SKIP .
+
+
 RUN ProcessAst (pu:getTopNode(), 0) .
 
 CATCH err AS Progress.Lang.Error:
