@@ -46,17 +46,18 @@ pu:treeParser01().
 
 DELETE OBJECT javafile .
 
-MESSAGE VALID-OBJECT (pu)
-VIEW-AS ALERT-BOX.
-
-
-
+OUTPUT TO simple-3.txt .
+RUN ProcessAst (pu:getTopNode(), 0) .
 
 CATCH err AS Progress.Lang.Error:
     MESSAGE err:GetMessage(1) SKIP
             err:CallStack
         VIEW-AS ALERT-BOX ERROR TITLE "Error".
 END CATCH.
+
+FINALLY:
+    OUTPUT CLOSE .
+END FINALLY.
 
 /**
  * Purpose: Exports the ABL Session Settings
@@ -120,5 +121,40 @@ PROCEDURE InitializeParserSession:
 
 END PROCEDURE.
 
+/**
+ * Purpose: Initializes the Propase Session
+ * Notes:
+ */
+PROCEDURE ProcessAst:
+
+    DEFINE INPUT PARAMETER poNode    AS JPNode  NO-UNDO .
+    DEFINE INPUT PARAMETER piNesting AS INTEGER NO-UNDO .
+
+    DEFINE VARIABLE cNodeType AS CHARACTER NO-UNDO .
+    DEFINE VARIABLE oChild    AS JPNode    NO-UNDO .
+
+    DEFINE VARIABLE cSubtypes AS CHARACTER NO-UNDO
+        INIT "JPNode,BlockNode,FieldRefNode,RecordNameNode,ProparseDirectiveNode,ProgramRootNode":U .
+
+    ASSIGN cNodeType = CAST (poNode, System.Object):GetType():FullName
+           cNodeType = ENTRY (NUM-ENTRIES (cNodeType, "."), cNodeType, ".").
+
+    PUT UNFORMATTED FILL (" ", piNesting * 2)
+                    cNodeType " "
+                    FILL (" ", 30 - piNesting * 2 - LENGTH (cNodeType))           "| "
+                    STRING (NodeTypes:getTypeName(poNode:getType()),     "x(20)") "| "
+                    STRING (ENTRY (poNode:getSubTypeIndex(), cSubtypes), "x(16)") "| "
+                    STRING (poNode:getText(),                            "x(20)") "| "
+                    poNode:ToString()
+                    SKIP .
+
+    ASSIGN oChild = poNode:firstChild () .
+
+    DO WHILE VALID-OBJECT (oChild):
+        RUN ProcessAst (oChild, piNesting + 1) .
 
 
+        oChild = oChild:nextSibling () .
+    END.
+
+END PROCEDURE .
