@@ -1,0 +1,112 @@
+org.prorefactor.nodetypes....  | getType()           |getSubTypeIndex()| getText ()          | ToString ()
+-------------------------------|---------------------|-----------------|---------------------|--------------------------------------------
+ProgramRootNode                | Program_root        | ProgramRootNode |                     | Program_root "" customer-tt.p:0:0
+  JPNode                       | BLOCKLEVEL          | JPNode          | BLOCK-LEVEL         | BLOCKLEVEL "BLOCK-LEVEL" customer-tt.p:16:1
+    JPNode                     | ON                  | JPNode          | ON                  | ON "ON" customer-tt.p:16:13
+    JPNode                     | ERROR               | JPNode          | ERROR               | ERROR "ERROR" customer-tt.p:16:16
+    JPNode                     | UNDO                | JPNode          | UNDO                | UNDO "UNDO" customer-tt.p:16:22
+    JPNode                     | COMMA               | JPNode          | ,                   | COMMA "," customer-tt.p:16:26
+    JPNode                     | THROW               | JPNode          | THROW               | THROW "THROW" customer-tt.p:16:28
+    JPNode                     | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:16:33
+  JPNode                       | DEFINE              | JPNode          | DEFINE              | DEFINE "DEFINE" customer-tt.p:18:1
+    JPNode                     | TEMPTABLE           | JPNode          | TEMP-TABLE          | TEMPTABLE "TEMP-TABLE" customer-tt.p:18:8
+    JPNode                     | ID                  | JPNode          | ttCustomer          | ID "ttCustomer" customer-tt.p:18:19
+    JPNode                     | NOUNDO              | JPNode          | NO-UNDO             | NOUNDO "NO-UNDO" customer-tt.p:18:30
+    JPNode                     | LIKE                | JPNode          | LIKE                | LIKE "LIKE" customer-tt.p:19:5
+      RecordNameNode           | RECORD_NAME         | RecordNameNode  | Customer            | RECORD_NAME "Customer" customer-tt.p:19:10
+        getTableBuffer():fullName():            sports2000.Customer
+        getTableBuffer():getTable():getName():  Customer
+    JPNode                     | FIELD               | JPNode          | FIELD               | FIELD "FIELD" customer-tt.p:20:5
+      JPNode                   | ID                  | JPNode          | FieldOrderTotal     | ID "FieldOrderTotal" customer-tt.p:20:11
+      JPNode                   | AS                  | JPNode          | AS                  | AS "AS" customer-tt.p:20:27
+        JPNode                 | DECIMAL             | JPNode          | DECIMAL             | DECIMAL "DECIMAL" customer-tt.p:20:30
+    JPNode                     | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:20:38
+  JPNode                       | RUN                 | JPNode          | RUN                 | RUN "RUN" customer-tt.p:24:1
+    JPNode                     | FILENAME            | JPNode          | DoSomething         | FILENAME "DoSomething" customer-tt.p:24:5
+    JPNode                     | Parameter_list      | JPNode          |                     | Parameter_list "" customer-tt.p:0:0
+      JPNode                   | LEFTPAREN           | JPNode          | (                   | LEFTPAREN "(" customer-tt.p:24:17
+      JPNode                   | INPUT               | JPNode          |                     | INPUT "" customer-tt.p:0:0
+        JPNode                 | TABLE               | JPNode          | TABLE               | TABLE "TABLE" customer-tt.p:24:18
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | ttCustomer          | RECORD_NAME "ttCustomer" customer-tt.p:24:24
+          getTableBuffer():fullName():            ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+        JPNode                 | BYREFERENCE         | JPNode          | BY-REFERENCE        | BYREFERENCE "BY-REFERENCE" customer-tt.p:24:35
+      JPNode                   | RIGHTPAREN          | JPNode          | )                   | RIGHTPAREN ")" customer-tt.p:24:47
+    JPNode                     | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:24:49
+  BlockNode                    | PROCEDURE           | BlockNode       | PROCEDURE           | PROCEDURE "PROCEDURE" customer-tt.p:26:1
+    JPNode                     | ID                  | JPNode          | DoSomething         | ID "DoSomething" customer-tt.p:26:11
+    JPNode                     | LEXCOLON            | JPNode          | :                   | LEXCOLON ":" customer-tt.p:26:22
+    JPNode                     | Code_block          | JPNode          |                     | Code_block "" customer-tt.p:0:0
+      JPNode                   | DEFINE              | JPNode          | DEFINE              | DEFINE "DEFINE" customer-tt.p:28:5
+        JPNode                 | INPUT               | JPNode          | INPUT               | INPUT "INPUT" customer-tt.p:28:12
+        JPNode                 | PARAMETER           | JPNode          | PARAMETER           | PARAMETER "PARAMETER" customer-tt.p:28:18
+        JPNode                 | TABLE               | JPNode          | TABLE               | TABLE "TABLE" customer-tt.p:28:28
+        JPNode                 | FOR                 | JPNode          | FOR                 | FOR "FOR" customer-tt.p:28:34
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | ttCustomer          | RECORD_NAME "ttCustomer" customer-tt.p:28:38
+          getTableBuffer():fullName():            ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:28:49
+      JPNode                   | DEFINE              | JPNode          | DEFINE              | DEFINE "DEFINE" customer-tt.p:30:5
+        JPNode                 | BUFFER              | JPNode          | BUFFER              | BUFFER "BUFFER" customer-tt.p:30:12
+        JPNode                 | ID                  | JPNode          | b_ttCustomer        | ID "b_ttCustomer" customer-tt.p:30:19
+        JPNode                 | FOR                 | JPNode          | FOR                 | FOR "FOR" customer-tt.p:30:32
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | ttCustomer          | RECORD_NAME "ttCustomer" customer-tt.p:30:36
+          getTableBuffer():fullName():            ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:30:47
+      JPNode                   | DEFINE              | JPNode          | DEFINE              | DEFINE "DEFINE" customer-tt.p:31:5
+        JPNode                 | BUFFER              | JPNode          | BUFFER              | BUFFER "BUFFER" customer-tt.p:31:12
+        JPNode                 | ID                  | JPNode          | b2_ttCustomer       | ID "b2_ttCustomer" customer-tt.p:31:19
+        JPNode                 | FOR                 | JPNode          | FOR                 | FOR "FOR" customer-tt.p:31:33
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | ttCustomer          | RECORD_NAME "ttCustomer" customer-tt.p:31:37
+          getTableBuffer():fullName():            ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:31:48
+      BlockNode                | FOR                 | BlockNode       | FOR                 | FOR "FOR" customer-tt.p:33:5
+        JPNode                 | EACH                | JPNode          | EACH                | EACH "EACH" customer-tt.p:33:9
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | ttCustomer          | RECORD_NAME "ttCustomer" customer-tt.p:33:14
+          getTableBuffer():fullName():            ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+          getBufferScope():getSymbol():getName(): ttCustomer
+          getBufferScope():isStrong():            no isWeak(): yes 
+          getBufferScope():getBlock():getNode():  FOR "FOR" customer-tt.p:33:5
+        JPNode                 | LEXCOLON            | JPNode          | :                   | LEXCOLON ":" customer-tt.p:33:24
+        JPNode                 | Code_block          | JPNode          |                     | Code_block "" customer-tt.p:0:0
+        JPNode                 | END                 | JPNode          | END                 | END "END" customer-tt.p:35:5
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:35:8
+      BlockNode                | FOR                 | BlockNode       | FOR                 | FOR "FOR" customer-tt.p:37:5
+        JPNode                 | FIRST               | JPNode          | FIRST               | FIRST "FIRST" customer-tt.p:37:9
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | ttCustomer          | RECORD_NAME "ttCustomer" customer-tt.p:37:15
+          getTableBuffer():fullName():            ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+          getBufferScope():getSymbol():getName(): ttCustomer
+          getBufferScope():isStrong():            no isWeak(): yes 
+          getBufferScope():getBlock():getNode():  FOR "FOR" customer-tt.p:37:5
+        JPNode                 | LEXCOLON            | JPNode          | :                   | LEXCOLON ":" customer-tt.p:37:25
+        JPNode                 | Code_block          | JPNode          |                     | Code_block "" customer-tt.p:0:0
+        JPNode                 | END                 | JPNode          | END                 | END "END" customer-tt.p:39:5
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:39:8
+      BlockNode                | DO                  | BlockNode       | DO                  | DO "DO" customer-tt.p:41:5
+        JPNode                 | FOR                 | JPNode          | FOR                 | FOR "FOR" customer-tt.p:41:8
+          RecordNameNode       | RECORD_NAME         | RecordNameNode  | b_ttCustomer        | RECORD_NAME "b_ttCustomer" customer-tt.p:41:12
+            getTableBuffer():fullName():            b_ttCustomer
+            getTableBuffer():getTable():getName():  ttCustomer
+            getBufferScope():getSymbol():getName(): b_ttCustomer
+            getBufferScope():isStrong():            yes isWeak(): no 
+            getBufferScope():getBlock():getNode():  DO "DO" customer-tt.p:41:5
+        JPNode                 | LEXCOLON            | JPNode          | :                   | LEXCOLON ":" customer-tt.p:41:24
+        JPNode                 | Code_block          | JPNode          |                     | Code_block "" customer-tt.p:0:0
+        JPNode                 | END                 | JPNode          | END                 | END "END" customer-tt.p:43:5
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:43:8
+      JPNode                   | FIND                | JPNode          | FIND                | FIND "FIND" customer-tt.p:45:5
+        JPNode                 | FIRST               | JPNode          | FIRST               | FIRST "FIRST" customer-tt.p:45:10
+        RecordNameNode         | RECORD_NAME         | RecordNameNode  | b2_ttCustomer       | RECORD_NAME "b2_ttCustomer" customer-tt.p:45:16
+          getTableBuffer():fullName():            b2_ttCustomer
+          getTableBuffer():getTable():getName():  ttCustomer
+          getBufferScope():getSymbol():getName(): b2_ttCustomer
+          getBufferScope():isStrong():            no isWeak(): no 
+          getBufferScope():getBlock():getNode():  PROCEDURE "PROCEDURE" customer-tt.p:26:1
+        JPNode                 | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:45:30
+    JPNode                     | END                 | JPNode          | END                 | END "END" customer-tt.p:47:1
+    JPNode                     | PERIOD              | JPNode          | .                   | PERIOD "." customer-tt.p:47:4
+  JPNode                       | Program_tail        | JPNode          |                     | Program_tail "" customer-tt.p:0:0
